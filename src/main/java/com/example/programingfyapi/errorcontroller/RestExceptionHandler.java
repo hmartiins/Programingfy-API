@@ -26,7 +26,8 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
             HttpStatus status,
             WebRequest request
     ) {
-        String error = ex.getParameterName() + " parameter is missing";
+        var error = ex.getParameterName() + " parameter is missing";
+
         return buildResponseEntity(new ApiError(HttpStatus.BAD_REQUEST, error, ex));
     }
 
@@ -37,7 +38,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
             HttpStatus status,
             WebRequest request
     ) {
-        String error = "Malformed JSON request";
+        var error = "Malformed JSON request";
 
         return buildResponseEntity(new ApiError(HttpStatus.BAD_REQUEST, error, ex));
     }
@@ -46,7 +47,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     protected ResponseEntity<Object> handleEntityNotFound(
             EntityNotFoundException ex
     ) {
-        ApiError apiError = new ApiError(HttpStatus.NOT_FOUND);
+        var apiError = new ApiError(HttpStatus.NOT_FOUND);
         apiError.setMessage(ex.getMessage());
 
         return buildResponseEntity(apiError);
