@@ -1,10 +1,10 @@
-package com.example.programingfyapi;
+package com.example.logusletterapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProgramingfyApiApplicationTests {
+class LogusLetterApiApplicationApplicationTests {
 
     @Test
     void contextLoads() {

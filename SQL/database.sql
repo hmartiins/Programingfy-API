@@ -1,8 +1,8 @@
--- Database: programingfy
+-- Database: logusletter
 
--- DROP DATABASE IF EXISTS programingfy;
+DROP DATABASE IF EXISTS logusletter;
 
-CREATE DATABASE programingfy
+CREATE DATABASE logusletter
     WITH
     OWNER = postgres
     ENCODING = 'UTF8'
@@ -11,11 +11,10 @@ CREATE DATABASE programingfy
     TABLESPACE = pg_default
     CONNECTION LIMIT = -1;
 
-\c programingfy
+\c logusletter
 
 CREATE TABLE users (
     id INT NOT NULL PRIMARY KEY UNIQUE,
     name VARCHAR(255) NOT NULL ,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    password VARCHAR NOT NULL
+    email VARCHAR(255) NOT NULL UNIQUE
 );

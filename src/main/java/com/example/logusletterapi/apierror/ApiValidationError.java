@@ -1,4 +1,4 @@
-package com.example.programingfyapi.apierror;
+package com.example.logusletterapi.apierror;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

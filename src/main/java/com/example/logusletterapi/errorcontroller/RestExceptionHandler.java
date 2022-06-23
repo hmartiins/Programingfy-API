@@ -1,6 +1,6 @@
-package com.example.programingfyapi.errorcontroller;
+package com.example.logusletterapi.errorcontroller;
 
-import com.example.programingfyapi.apierror.ApiError;
+import com.example.logusletterapi.apierror.ApiError;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpHeaders;

@@ -1,4 +1,4 @@
-package com.example.programingfyapi.utils;
+package com.example.logusletterapi.utils;
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.databind.jsontype.impl.TypeIdResolverBase;

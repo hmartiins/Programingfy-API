@@ -1,13 +1,13 @@
-package com.example.programingfyapi;
+package com.example.logusletterapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProgramingfyApiApplication {
+public class LogusLetterApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProgramingfyApiApplication.class, args);
+		SpringApplication.run(LogusLetterApiApplication.class, args);
 	}
 
 }

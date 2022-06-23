@@ -1,4 +1,4 @@
-package com.example.programingfyapi.errorcontroller;
+package com.example.logusletterapi.errorcontroller;
 
 import org.apache.commons.lang3.StringUtils;
 

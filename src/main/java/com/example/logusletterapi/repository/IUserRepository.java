@@ -1,6 +1,6 @@
-package com.example.programingfyapi.repository;
+package com.example.logusletterapi.repository;
 
-import com.example.programingfyapi.model.User;
+import com.example.logusletterapi.model.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
-package com.example.programingfyapi.apierror;
+package com.example.logusletterapi.apierror;
 
-import com.example.programingfyapi.utils.LowerCaseClassNameResolver;
+import com.example.logusletterapi.utils.LowerCaseClassNameResolver;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.databind.annotation.JsonTypeIdResolver;

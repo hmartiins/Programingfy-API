@@ -1,8 +1,8 @@
-package com.example.programingfyapi.controller;
+package com.example.logusletterapi.controller;
 
-import com.example.programingfyapi.model.User;
-import com.example.programingfyapi.repository.IUserRepository;
-import com.example.programingfyapi.errorcontroller.EntityNotFoundException;
+import com.example.logusletterapi.model.User;
+import com.example.logusletterapi.repository.IUserRepository;
+import com.example.logusletterapi.errorcontroller.EntityNotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,10 +19,6 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<User> create(@RequestBody User newUser) throws EntityNotFoundException {
-        return ResponseEntity.status(HttpStatus.CREATED).body(userRepository.save(newUser));
-    }
-
-    public ResponseEntity<User> get(@RequestBody User newUser) throws EntityNotFoundException {
         return ResponseEntity.status(HttpStatus.CREATED).body(userRepository.save(newUser));
     }
 

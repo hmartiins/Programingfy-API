@@ -1,4 +1,4 @@
-package com.example.programingfyapi.model;
+package com.example.logusletterapi.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
@@ -25,9 +25,6 @@ public class User {
 
     @Column(length = 255, nullable = false)
     private String email;
-
-    @Column(nullable = false)
-    private String password;
 
     @Override
     public boolean equals(Object o) {
