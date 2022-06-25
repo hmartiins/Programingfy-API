@@ -3,11 +3,13 @@ package com.example.logusletterapi.controller;
 import com.example.logusletterapi.model.User;
 import com.example.logusletterapi.repository.IUserRepository;
 import com.example.logusletterapi.errorcontroller.EntityNotFoundException;
+import com.example.logusletterapi.service.lambda.SESService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.Optional;
 
 @RestController
@@ -23,7 +25,7 @@ public class UserController {
     }
 
     @GetMapping(value = "/{userId}")
-    public ResponseEntity<Optional<User>> getBirdNoException(@PathVariable("userId") Long userId) throws EntityNotFoundException {
+    public ResponseEntity<Optional<User>> get(@PathVariable("userId") Long userId) throws EntityNotFoundException {
         var user = userRepository.findById(userId);
 
         if (user.isEmpty()) {
@@ -31,6 +33,19 @@ public class UserController {
         }
 
         return ResponseEntity.status(HttpStatus.OK).body(user);
+    }
+
+    @GetMapping
+    public ResponseEntity<Iterable<User>> list() throws EntityNotFoundException {
+        var user = userRepository.findAll();
+
+        return ResponseEntity.status(HttpStatus.OK).body(user);
+    }
+
+    @PostMapping(path = "/sendEmail")
+    public ResponseEntity sendEmail() throws EntityNotFoundException {
+        SESService.sendMessage("LogusLetter - " + LocalDate.now());
+        return ResponseEntity.status(HttpStatus.OK).body(null);
     }
 
 }
