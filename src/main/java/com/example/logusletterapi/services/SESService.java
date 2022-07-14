@@ -1,4 +1,4 @@
-package com.example.logusletterapi.service.lambda;
+package com.example.logusletterapi.services;
 
 import io.github.cdimascio.dotenv.Dotenv;
 import software.amazon.awssdk.regions.Region;
