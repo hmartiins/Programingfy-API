@@ -42,10 +42,10 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.OK).body(user);
     }
 
-    @PostMapping(path = "/sendEmail")
-    public ResponseEntity sendEmail() throws EntityNotFoundException {
-        SESService.sendMessage("LogusLetter - " + LocalDate.now());
-        return ResponseEntity.status(HttpStatus.OK).body(null);
-    }
+//    @PostMapping(path = "/sendEmail")
+//    public ResponseEntity sendEmail() throws EntityNotFoundException {
+//        SESService.sendMessage("LogusLetter - " + LocalDate.now());
+//        return ResponseEntity.status(HttpStatus.OK).body(null);
+//    }
 
 }
