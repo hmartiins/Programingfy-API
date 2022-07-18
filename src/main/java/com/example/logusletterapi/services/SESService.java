@@ -24,7 +24,7 @@ import software.amazon.awssdk.services.ses.model.RawMessage;
 import software.amazon.awssdk.services.ses.model.SesException;
 
 public class SESService {
-    public static void sendMessage(String message) {
+    public static void sendMessage(String message, String recipientMailAddress) {
         Dotenv dotenv = Dotenv.configure().load();
 
         AwsCredentialsProvider credentialsProvider = new AwsCredentialsProvider() {
@@ -50,8 +50,6 @@ public class SESService {
                 .region(region)
                 .build();
 
-        String bodyText = "Olá este é um email";
-
         String bodyHTML = "<html>"
                 + "<head></head>"
                 + "<body>"
@@ -63,14 +61,12 @@ public class SESService {
         try {
             send(
                 client, "hmartins224@gmail.com",
-                "hmartiins224@gmail.com",
+                    recipientMailAddress,
                 "LogusLetter",
-                bodyText,
+                    message,
                 bodyHTML
             );
             client.close();
-
-            System.out.println("Email enviado!");
 
         } catch (IOException | MessagingException e) {
             e.getStackTrace();
